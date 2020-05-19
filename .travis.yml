@@ -13,7 +13,7 @@ deploy:
   provider: elasticsbeanstaclk
   region: "ap-southeast-2"
   app: "docker-react"
-  env: "Docker-env"
+  env: "DockerReact-env"
   bucket_name: "phuongngo-first-bucket"
   bucket_path: "docker-react"
   on:
