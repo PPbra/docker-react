@@ -8,3 +8,16 @@ before_install:
 
 script:
   - docker run -e CI=true ppbra/docker-react npm run test
+
+deploy:
+  provider: elasticsbeanstaclk
+  region: "ap-southeast-2"
+  app: "docker-react"
+  env: "Docker-env"
+  bucket_name: "phuongngo-first-bucket"
+  bucket_path: "docker-react"
+  on:
+    branch: master
+access_key_id: $AWS_ACCESS_KEY
+secret_access_key:
+  secure: "$AWS_SECRET_KEY"
